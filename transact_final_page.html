@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Help feed a kid</title>
+
+ <style>
+ body{
+ font-family: Arial, Helvetica, sans-serif;
+ background-color: rgb(248, 248, 253);
+ margin: 0;
+ padding: 20px;
+ padding-bottom: 90px;
+ }
+
+ header{
+ text-align: center;
+ background-color: aquamarine;
+ font-size: larger;
+ color: rgb(1, 1, 1);
+ padding: 20px 0;
+ }
+
+ nav {
+ background-color: #0ea5a4;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 10px 20px;
+ position: sticky;
+ top: 0;
+ }
+
+ .logo{
+ width: 80px;
+ height:auto;
+ margin-right: 10px;
+ }
+
+ .heading{
+ color: white;
+ font-size: 22px;
+ font-weight: bold;
+ text-decoration: none;
+ text-align: center;
+ }
+
+ .nav-links{
+ display: flex;
+ gap: 20px;
+ }
+
+ .nav-links a {
+ color: white;
+ text-decoration: none;
+ font-size: 16px;
+ }
+
+
+
+ .section-box{
+ background: white;
+ padding: 20px;
+ margin: 20px 0;
+ border-radius: 10px;
+ box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+ }
+
+ h2{
+ text-align: center;
+ }
+
+ form input{
+ width: 95%;
+ padding: 10px;
+ margin: 10px 0;
+ border: 1px solid #ccc;
+ border-radius: 5px;
+ }
+
+ form button{
+ padding: 12px 20px;
+ background-color: #0ea5a4;
+ color: white;
+ border: none;
+ border-radius: 6px;
+ cursor: pointer;
+ font-size: 16px;
+ }
+
+ form button:hover{
+ background-color: #0b8382;
+ }
+
+ .qr-img{
+ display: block;
+ margin: auto;
+ width: 250px;
+ height: auto;
+ border-radius: 10px;
+ }
+
+
+ footer {
+ position: fixed;
+ left: 0;
+ bottom: 0;
+ width: 100%;
+ height: 60px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background-color: #f2f2f2;
+ color: #333;
+ 
+ }
+
+ @media (max-width: 420px) {
+ .donate-btn { padding: 12px 18px; bottom: 90px; right: 12px; }
+ footer { height: 70px; }
+ body { padding-bottom: 110px; }
+ }
+ </style>
+</head>
+
+<body>
+
+<!-- NAV BAR -->
+<nav>
+ <img class="logo" src="logo_mp.jpg" alt="website logo">
+ <h1 class="heading">FOOD FOR ALL</h1>
+
+ <div class="nav-links">
+ <a href="home.html">home</a>
+ <a href="about.html">About</a>
+ <a href="donate.html">Donate</a>
+ <a href="transact_final_page.html">Transaction</a>
+ <a href="Contact.html">Contact</a>
+ <a href="SDG.html">SDG</a>
+ </div>
+</nav>
+
+<header> SUPPORT OUR WORK </header>
+
+<!-- ==================== DIV 1: PICKUP SCHEDULING FORM ==================== -->
+<div class="section-box">
+ <h2>Schedule a Pickup (Dry Food Donation)</h2>
+
+ <form>
+   <input type="text" placeholder="Your Full Name" required>
+   <input type="text" placeholder="Pickup Address" required>
+   <input type="text" placeholder="Type of Dry Food Items" required>
+   <input type="text" placeholder="Preferred Pickup Date" required>
+
+   <button type="submit">Schedule Pickup</button>
+ </form>
+</div>
+
+
+<!-- ==================== DIV 2: QR CODE DONATION ==================== -->
+<div class="section-box">
+ <h2>Scan to Donate (Monetary Support)</h2>
+
+ <img class="qr-img" src="https://i.pinimg.com/564x/7b/67/09/7b67097f2be633efd643ab7dec032d4b.jpg" alt="QR Code for Donation">
+
+ <p style="text-align:center;">Scan the QR code above to support our mission.</p>
+</div>
+ <!-- vvolunteer  -->
+
+<div class="section-box">
+ <h2>Volunteer Registration</h2>
+
+ <form>
+   <input type="text" placeholder="Full Name" required>
+   <input type="text" placeholder="Email Address" required>
+   <input type="text" placeholder="Phone Number" required>
+   <input type="text" placeholder="Area of Interest" required>
+
+   <button type="submit">Register as Volunteer</button>
+ </form>
+</div>
+<footer>
+ © 2025 Food For All. All Rights Reserved.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Help feed a kid</title>
+ <style>
+ body{
+ font-family: Arial, Helvetica, sans-serif;
+background-color: rgb(248, 248, 253);
+ margin: 0;
+ padding: 20px;
+ padding-bottom: 90px;
+ }
+ header{
+ text-align: center;
+ background-color: aquamarine;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: larger;
+ color: rgb(1, 1, 1);
+ padding: 20px 0;
+ }
+ .heading{
+ color: white;
+ font-size: 22px;
+ font-weight: bold;
+ text-decoration: none;
+ text-align: center;
+ }
+ nav {
+ background-color: #0ea5a4;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 10px 20px;
+position: sticky;
+ top: 0;
+ z-index: 1000;
+ }
+ .logo{
+ width: 80px;
+ height:auto;
+ margin-right: 10px;
+ }
+ .nav-links{
+ display: flex;
+ gap: 20px;
+ }
+ .nav-links a {
+ color: white;
+ text-decoration: none;
+ font-size: 16px;
+ transition: color 0.3s;
+ }
+ .nav-links a:hover{
+ color: #ffe8e5;
+ }
+ .donate-btn{
+ position: fixed;
+ bottom: 80px;
+ right: 20px;
+background-color: #ff6f61;
+ color: white;
+ padding: 15px 25px;
+ border: none;
+ border-radius: 10px;
+ font-size: 16px;
+ cursor: pointer;
+ box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+ transition: background 0.3s;
+ }
+ .donate-btn:hover{
+ background-color: #e85a4f;
+ }
+ footer {
+ position: fixed;
+ left: 0;
+ bottom: 0;
+ width: 100%;
+ height: 60px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background-color: #f2f2f2;
+ color: #333;
+ box-shadow: 0 -2px 6px rgba(0,0,0,0.08);
+}
+ @media (max-width: 420px) {
+ .donate-btn { padding: 12px 18px; bottom: 90px; right: 12px; }
+ footer { height: 70px; }
+ body { padding-bottom: 110px; }
+ }
+ img{
+ max-width: 25%;
+ align-self: center;
+ height: 200px;
+ }
+ </style>
+</head>
+<body>
+ <section>
+ <nav>
+<img src="logo_mp.jpg" alt="logo" class="logo">
+ <h1 class="heading">FOOD FOR ALL</h1>
+ <div class="nav-links">
+ <a href="home.html">home</a>
+ <a href="About.html">About</a>
+ <a href="donate.html">Donate</a>
+ <a href="transact_final_page.html">Transaction</a>
+<a href="Contact.html">Contact</a>
+<a href="SDG.html">SDG</a>
+ </div>
+ </nav>
+ </section>
+ <section>
+ <header> SHARE A MEAL</header>
+ <P>No plate should go empty. No heart should go hungry.
+Every meal you share brings comfort to a hungry heart. Together, let’s make sure no child or
+elder goes to bed hungry tonight.</P>
+ <h2 style="text-align: center;">Share your meal. Feed a life.</h2>
+ </section>
+ <section>
+ <p><h3 style="text-align: center;"> 1. Impact on Hunger & Food Insecurity</h3>
+ Show how donations directly reduce hunger.
+ Meals provided:
+ “Every 1 kg of donated food provides 2.5 meals for someone in need.”
+ People helped:
+ “Over 50,000 individuals received meals this year thanks to community donations.”
+ Reduction in food insecurity:
+ “Food donations have helped reduce food insecurity in our region by 15% over the past 2
+years.”
+</p>
+ <P><h3 style="text-align: center;"> 2. Food Waste Reduction</h3>
+ Emphasize how donations prevent good food from going to waste.
+ Tons of food saved:
+ “We rescued 200 tons of food that would otherwise have gone to landfills.”
+ Environmental benefit:
+ “That’s equivalent to preventing 350 tons of CO₂ emissions — the same as taking 75 cars
+off the road for a year.”
+ Waste diversion:
+ “Every donated meal keeps 1.2 kg of food waste out of landfills.”</P>
+ <img src="pic_mp.jpg"alt="handing out food" center>
+ </section>
+ <button class="donate-btn" onclick="window.location.href='donate.html'">
+ donate now
+ </button>
+ <footer>
+ © 2025 Food For All. All Rights Reserved.
+ </footer>
+</body>
+</html>

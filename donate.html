@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donation Cards</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      /* Background image with overlay */
+      background: url("./food\ donation.jpg") center/cover no-repeat fixed;
+      background-color: #f2fbff; /* fallback color */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Navigation */
+    .navigation-tab {
+      width: 100vw;
+      background: rgba(14, 165, 164, 0.9); /* semi-transparent overlay */
+      padding: 12px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+
+    nav {
+      display: flex;
+      justify-content: flex-end; /* RIGHT ALIGN NAV LINKS */
+      align-items: center;
+      color: white;
+      max-width: 1200px;
+      margin: auto;
+      position: relative;
+    }
+
+    .Heading {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.4rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+
+    .nav-links a {
+      margin-left: 20px;
+      color: white;
+      text-decoration: underline;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ffe8ff;
+    }
+
+    /* Cards Container */
+    .container {
+      display: flex;
+      gap: 30px;
+      margin-top: 70px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card {
+      width: 230px;
+      height: 360px;
+      perspective: 1000px;
+    }
+
+    .inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.7s ease;
+    }
+
+    .card:hover .inner {
+      transform: rotateX(180deg);
+    }
+
+    .front, .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 15px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: white;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .front h3, .back h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      color: #0ea5a4;
+    }
+
+    .front p, .back p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: #444;
+    }
+
+    .back {
+      transform: rotateX(180deg);
+      background: #e0f8f8;
+    }
+
+    /* Buttons */
+    .card-btn {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 50px;
+      background: #0ea5a4;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.18);
+    }
+
+    .card-btn:hover {
+      background: #7c3aed;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 60px;
+      padding: 15px 0;
+      width: 100%;
+      text-align: center;
+      background: #333;
+      color: white;
+      position: fixed;
+      bottom: 0px;
+    }
+
+    /* WHY DONATE SECTION */
+    .why-donate {
+      margin-top: 60px;
+      padding: 40px 20px;
+      text-align: center;
+      max-width: 1100px;
+    }
+
+    .why-donate h2 {
+      font-size: 2rem;
+      color: #0ea5a4;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+    }
+
+    .why-item {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+      transition: 0.5s ease;
+    }
+
+    .why-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+    }
+
+    .icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .why-item h3 {
+      color: #0ea5a4;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .why-item p {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    .why-donate {
+      margin-bottom: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="navigation-tab">
+    <nav>
+      <h1 class="Heading">Meal of Hope.</h1>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="donate.html">Donate</a>
+        <a href="transact_final_page.html">Transaction</a>
+        <a href="Contact.html">Contact</a>
+        <a href="SDG.html">SDG</a>
+      </div>
+    </nav>
+  </section>
+
+  <div class="container">
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="inner">
+          <div class="front">
+            <h3>Food Donation 🍱</h3>
+            <p>Donate fresh food, dry food, or essentials.</p>
+          </div>
+          <div class="back">
+            <h3>Thank You!</h3>
+            <p>Your donation makes a difference.</p>
+          </div>
+        </div>
+      </div>
+      <button class="card-btn">Schedule Pickup</button>
+    </div>
+
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="inner">
+          <div class="front">
+            <h3>Monetary Donation 💳</h3>
+            <p>Support our mission by donating any amount.</p>
+          </div>
+          <div class="back">
+            <h3>UPI, QR, Netbanking</h3>
+            <p>yourname@upi</p>
+            <p>foodhelp@okaxis</p>
+            <p>donate@paytm</p>
+          </div>
+        </div>
+      </div>
+      <button class="card-btn">Donate Now</button>
+    </div>
+
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="inner">
+          <div class="front">
+            <h3>Volunteer 🙋‍♂</h3>
+            <p>Join us to help collect and distribute food.</p>
+          </div>
+          <div class="back">
+            <h3>Two hands matter!</h3>
+            <p>Serving people is serving the almighty.</p>
+          </div>
+        </div>
+      </div>
+      <button class="card-btn">Register as Volunteer</button>
+    </div>
+  </div>
+
+  <!-- WHY DONATE SECTION -->
+  <section class="why-donate">
+    <h2>Why Donate With Food For All?</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="icon">🍽</div>
+        <h3>Every Meal Matters</h3>
+        <p>Your contribution directly feeds children, the elderly, and families in need—no middlemen.</p>
+      </div>
+
+      <div class="why-item">
+        <div class="icon">🤝</div>
+        <h3>Trusted & Transparent</h3>
+        <p>We maintain 100% transparency. You always know where your donations go.</p>
+      </div>
+
+      <div class="why-item">
+        <div class="icon">🚚</div>
+        <h3>Fast Pickup & Delivery</h3>
+        <p>Fresh food is collected quickly and distributed the same day to avoid wastage.</p>
+      </div>
+
+      <div class="why-item">
+        <div class="icon">❤</div>
+        <h3>Impact You Can See</h3>
+        <p>With every donation, you’re helping ensure no one sleeps hungry. Real change—real stories.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2025 Donation Initiative</footer>
+</body>
+</html>
